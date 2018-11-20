@@ -4,10 +4,15 @@ module.exports = {
 	configureWebpack: {
 		plugins: [
 			new CopyWebpackPlugin([
-				'./src/assets/style/*.css'
-			],
-			[
-				'./public/style/'
+				{
+					from:'./src/assets/style/*.css',
+					to : '',
+					flatten : true
+				},
+				{
+					from:'./src/assets/images',
+					to : 'images/',
+				}
 			])
 		]
 	}

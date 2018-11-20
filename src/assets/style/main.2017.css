@@ -1,0 +1,591 @@
+@charset "utf-8";
+/* MAIN */
+/* @brief Key Visual */
+.key-visual {
+	height: 460px;
+	background-color: #000000;
+	padding: 0;
+}
+
+.key-visual .container {
+	position: relative;
+	min-width: 1024px !important;
+	padding: 0;
+}
+
+.key-visual .row {
+	position: absolute;
+	width: 1072px;
+	left: 50%;
+	margin-left: -536px;
+	top: 0;
+}
+
+.key-visual h2 {
+	color:#fff;
+	height:73px;
+	padding-top: 52px;
+	font-size: 17px;
+	margin-top: 0;
+	margin-bottom: 0;
+	letter-spacing: 0;
+	font-weight: normal;
+
+}
+
+.key-visual h1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: -3px;
+	padding-top: 8px;
+	font-weight: bold;
+	color: #abad36;
+	letter-spacing: 0.4px;
+	font-size: 39px;
+	height:55px;
+}
+
+.key-visual .lead{
+	padding-top: 24px;
+	color:#ccc;
+	line-height: 27px;
+	font-size: 15px;
+	margin-bottom:0;
+	font-weight: normal;
+
+}
+
+.key-visual .powered {
+	margin-left:-3px;
+
+	height: 80px;
+	padding-top: 43px;
+	line-height: 23px;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 0.4px;
+	color: #d3242c;
+}
+
+.key-visual .powered img {
+	margin-left: 3px;
+}
+
+
+
+.key-visual .nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.key-visual .nav .btn-arrow-right{
+	margin-left: 4px;
+}
+
+.btn-arrow-right, .btn-arrow-left {
+	border-color: #666;
+}
+
+.key-visual .thumb-container {
+	display: inline-block;
+	border: 1px solid #666666;
+	margin-bottom: 10px;
+}
+
+.per-container {
+	display: none
+}
+.per-container.active {
+	display: block;
+}
+
+/* @brief main new music gallery list */
+.row.main-new-music {
+	padding-top:32px;
+	margin-right: -17.5px;
+	margin-left: -17.5px;
+	display: none;
+}
+
+.row.main-new-music.active {
+	display: block;
+}
+
+.main-new-music .col-xs-3 {
+	padding-right: 17.5px;
+	padding-left: 17.5px;
+	padding-bottom: 31px;
+}
+
+.main-new-music a {
+	color:#666666;
+}
+
+.main-new-music a:hover {
+	color:#acad36;
+}
+
+.main-new-music .music-cover {
+	display: block;
+	padding-bottom: 100%;
+	margin-bottom: 6px;
+	position: relative;
+}
+
+.main-new-music .music-cover .cover-util {
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:20;
+	width:100%;
+}
+
+.main-new-music .music-cover:hover .cover-util {
+	display: block;
+}
+
+.main-new-music .music-cover .cover-util .btn-icon {
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top: -13px;
+	z-index:3;
+}
+
+.main-new-music .music-cover .cover-util .btn-play-o {
+	margin-left: -36px;
+}
+
+.main-new-music .music-cover .cover-util .btn-add-o {
+	margin-left: 7px;
+}
+
+.main-new-music .music-cover .cover-util i {
+	display: block;
+	width: 100%;
+	padding-bottom: 100%;
+	background-color: #000;
+	opacity: 0.6;
+}
+
+.main-new-music .music-cover .img-responsive {
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.main-new-music .music-title {
+	display: block;
+	height:19.5px;
+	line-height:1.4;
+	overflow:hidden;
+	letter-spacing: 1.1px;
+}
+
+.main-new-music h4 {
+	font-size: 10.5pt;
+	margin:0;
+	font-weight: bold;
+}
+
+.main-new-music .artist-name {
+	display: block;
+	letter-spacing: 0.8px;
+	font-size: 12px;
+	margin-bottom: 2px;
+	line-height: 13px;
+	height: 14px;
+	font-weight: normal;
+}
+
+.main-new-music .spec{
+	font-size: 9pt; /*12px*/
+	height:14px;
+	font-weight: normal;
+}
+
+.main-new-music .spec > img {
+	margin-top: 3px;
+}
+
+.audio-infor {
+	padding-top: 1px;
+	color: #666666;
+	font-size: 12px;
+	font-weight: normal;
+	height:14px;
+	line-height:14px;
+	letter-spacing: 0px;
+}
+
+.audio-infor img{
+	vertical-align: middle;
+	margin-right: 3px;
+}
+
+.box-bottom-line {
+	display: block;
+	border-bottom: 2px solid #999999;
+	min-height: 4px;
+	margin-top: -1px;
+}
+
+/* @brief 그루버스 차트 */
+.table.chart-table {
+	margin: 0;
+	display: none;
+	border-bottom: 2px solid #999999;
+}
+.table.chart-table.active {
+	display: table;
+}
+
+.table.chart-table a:hover {
+		color:#abad36;
+}
+.table.chart-table tr {
+
+}
+
+/* 차트 테이블 1st row */
+.table.chart-table > thead > tr > th{
+	padding-top:7px;
+	padding-left: 4px;
+	padding-right: 0px;
+	padding-bottom: 7px;
+	vertical-align: middle;
+	border-bottom: 0;
+	height: 69px;
+
+}
+
+.table.chart-table > thead > tr > th.chart-rank {
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.table.chart-table > thead > tr > th a.music-title, .table.chart-table > thead > tr > th div.music-title {
+
+	width:218px;
+	display: block;
+	height:20px;
+	line-height: 20px;
+	font-size:12pt;
+	overflow:hidden;
+	letter-spacing: 0.4px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.table.chart-table > thead > tr > th div.music-title {
+	cursor: default;
+}
+
+
+.table.chart-table > thead > tr > th a.artist-name {
+	display: block;
+	height: 18px;
+	width:218px;
+	line-height: 1.4;
+	font-size: 9pt;
+	letter-spacing: 0.35px;
+	overflow: hidden;
+	margin: 0;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.table.chart-table > thead > tr:hover *{
+	font-weight: bold !important;
+}
+
+
+
+/* 차트 테이블 일반 row */
+.table.chart-table > tbody > tr > td {
+	padding-top:7px;
+	padding-left: 4px;
+	padding-right: 0px;
+	padding-bottom: 7px;
+	line-height: 1.42857143;
+	vertical-align: middle;
+	border-top: 1px solid #ddd;
+	height: 69px;
+}
+
+.table.chart-table > tbody > tr > td.chart-rank {
+	line-height: 15px;
+	font-size: 16px;
+}
+
+.table.chart-table > tbody > tr > td a.music-title, .table.chart-table > tbody > tr > td div.music-title {
+	display: block;
+	width:218px;
+	height: 17px;
+	line-height: 12px;
+	font-size: 14px !important;
+	overflow: hidden;
+	letter-spacing:0;
+	color: #666666;
+}
+
+
+
+.table.chart-table > tbody > tr > td a.artist-name {
+
+	display: block;
+	height: 17px;
+	width:218px;
+	line-height: 14px;
+	font-size: 12px;
+	letter-spacing: 0.3px;
+	overflow: hidden;
+	margin: 0;
+	color: #666666;
+}
+
+.table.chart-table > tbody > tr > td a:hover {
+	color: #abad36 !important;
+}
+
+.table.chart-table .spec{
+	font-size: 9pt; /*12px*/
+	height: 14px;
+	font-weight: normal;
+	margin-top: -1px;
+}
+
+.table.chart-table .spec > img {
+	margin-right: 3px;
+	margin-top: 3px;
+	vertical-align: bottom;
+}
+
+
+
+/* 차트 공통*/
+.table.chart-table .chart-rank{
+	padding: 0;
+}
+
+.table.chart-table .chart-play{
+	padding: 0;
+}
+
+/* add 버튼 간격 조정 */
+.table.chart-table .chart-play .btn-add-o-sm {
+	margin-left: 10px ;
+}
+
+.chart-more {
+	border-top:1px solid #ddd;
+	border-bottom: 2px solid #999999;
+	padding: 20px;
+	background-color:#e6e6e6;
+}
+
+.chart-more a{
+	display: block;
+	height:17px;
+	line-height: 14px;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.chart-more a:hover {
+	color: #abad36;
+}
+
+.chart-more a i {
+	vertical-align: top;
+}
+
+/* @brief Library */
+
+/* override */
+.row-2nd .col-634px, .row-2nd .col-342px {
+	padding-top:41px;
+}
+
+.table.library-table {
+	border-bottom: 2px solid #999999;
+	margin-bottom: 0;
+}
+
+.table.library-table > tbody > tr {
+
+}
+
+.table.library-table > tbody > tr > td {
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:0;
+	padding-right:0;
+	vertical-align: middle;
+	border-top:0;
+	height:115px;
+	border-bottom:1px solid #999999;
+
+}
+
+.table.library-table a {
+	color: #666;
+}
+
+.table.library-table a:hover {
+	color: #abad36;
+}
+
+
+.table.library-table h4 {
+	margin-top: 0;
+	margin-bottom: 4px;
+	margin-left: 20px;
+	height:20px;
+	font-weight: bold;
+	line-height:16px ;
+	font-size: 10.5pt;/*14px*/
+	overflow: hidden;
+}
+
+.table.library-table p {
+	margin-left: 20px;
+	margin-bottom: 0;
+	width:100%;
+	line-height: 20px;
+	/*max-height: 60px;*/
+	height:60px;
+	font-size: 9.75pt; /*13px*/
+	overflow: hidden;
+	letter-spacing: 0.6px;
+	width: 518px;
+
+}
+
+.thumb {
+	display: block;
+	position: relative;
+	width:95px;
+	padding-bottom: 100%;
+	overflow: hidden;
+}
+
+.thumb i{
+	display: none;
+	top:0;
+	left:0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border:3px solid #abad36;
+}
+
+.thumb:hover i {
+	display: block;
+}
+
+.thumb img {
+	left:0;
+	top:0;
+	position: absolute;
+}
+
+/* @brief 핫 아이템 */
+.item-container {
+	display: none;
+}
+.item-container.active {
+	display: block;
+}
+.item-img {
+	margin-top: 10px;
+	width: 342px;
+	height: 250px;
+	overflow: hidden;
+
+}
+
+.item-title {
+	height:41px;
+	display: block;
+	border-bottom:1px solid #d9d9d9;
+	padding-top:9px;
+	padding-left: 1px;
+	font-size: 14px;
+	color: #666666 !important;
+	letter-spacing: -0.25px;
+	font-weight: normal;
+
+}
+
+.item-title:hover {
+	color: #abad36 !important;
+
+}
+
+.item-price {
+	padding-top: 9px;
+	padding-left: 2px;
+	font-size: 16px;
+	display: block;
+	height:48px;
+	letter-spacing: 0.2px;
+	color: #333333;
+	border-bottom:2px solid #999999;
+}
+
+.artist-name-sub {
+	display: none;
+}
+
+.membership-popup .modal-content{
+	border:1px solid #b8b3ab;
+	padding-top: 18px;
+}
+
+.modal-header .close {
+    float: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+}
+
+
+.membership-popup .modal-header{
+	position: relative;
+}
+
+.membership-popup .modal-title{
+	padding-bottom: 26px;
+	border-bottom: 0;
+}
+
+
+
+
+
+
+.modal-title .text-warning {
+	color:#9a7c54;
+}
+
+.membership-popup .modal-body {
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.membership-popup .modal-body .btn-warning {
+	position: absolute;
+	z-index:10;
+	top:205px;
+	left:450px;
+	width:260px;
+
+}
