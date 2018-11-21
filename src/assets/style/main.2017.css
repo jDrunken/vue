@@ -589,3 +589,26 @@
 	width:260px;
 
 }
+
+
+
+/* 기존파일 수정 */
+.key-visual .nav { padding-top: 10px;padding-bottom: 8px;}
+.key-visual .thumb-container { display: inline-block;border: 1px solid rgba(0,0,0,0.4);margin-bottom: 6px;}
+
+/* 추가 */
+.key-visual h2.gr_pic_black { color: #333; height: 73px;padding-top: 52px;font-size: 16px;margin-top: 0;margin-bottom: 0;letter-spacing: 0;font-weight: normal;}
+.key-visual h1.gr_pic_black {margin-top: 0;margin-bottom: 0;margin-left: -3px;padding-top: 20px;font-weight: bold;color: #000;letter-spacing: 0.4px;font-size: 39px;height:55px;}
+.key-visual .lead2{padding-top: 70px;color: #333;line-height: 27px;font-size: 15px;margin-bottom:0;font-weight: normal;}
+a.gr_pic_black  {cursor: pointer; color:#000;font-size: 15px; line-height: 27px;}
+a:link.gr_pic_black { text-decoration:none; outline:none;}
+a:active.gr_pic_black { text-decoration:none;outline:none;}
+a:hover.gr_pic_black { text-decoration:none; outline:none;color:#666; }
+a:visited.gr_pic_black { text-decoration:none;outline:none;}
+
+/*2018-01-11*/
+.table.chart-table > tbody > tr > td a.artist-name{float:left; width:auto;}
+.chart-artist-span{display:block;width:218px;height:18px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+.main-new-music .col-xs-3 {max-height: 218.7px;}
+
