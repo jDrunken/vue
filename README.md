@@ -1,19 +1,27 @@
-# vue
+# vue (groovers demo)
 
 ## Project setup
+
 ```
 npm install
+npm install -g json-server
 ```
 
 ### Compiles and hot-reloads for development
 ```
+# run webpack-devserver
 npm run serve
+
+# running json dummy server
+json-server dummy.json
 ```
 
 ### Compiles and minifies for production
 ```
 npm run build
 ```
+
+## not yet
 
 ### Run your tests
 ```

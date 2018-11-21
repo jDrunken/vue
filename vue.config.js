@@ -20,11 +20,7 @@ module.exports = {
 					from:'./src/assets/fonts',
 					to : 'fonts/',
 				},
-				{
-					from:'./api-dummy',
-					to: 'api-dummy',
-				}
 			])
 		]
-	}
+	},
 }
