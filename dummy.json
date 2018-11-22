@@ -27,5 +27,91 @@
 			"title" : "Welcome! 그루버스 VIP!!",
 			"desc" : "2018년, 그루버스 VIP 멤버십을 소개합니다!"
 		}
+	],
+	"newmusic" : [
+		{
+			"id" : 0,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "테스트 1",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "mqs",
+			"bitrate" :"24/48",
+			"location" : "domestic"
+		},
+		{
+			"id" : 1,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "테스트 2",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "cd",
+			"bitrate" :"24/48",
+			"location" : "domestic"
+		},
+		{
+			"id" : 2,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "test 1",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "mqs",
+			"bitrate" :"24/48",
+			"location" : "overseas"
+		},
+		{
+			"id" : 3,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "클래식 제 1 테스트 1",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "mqs",
+			"bitrate" :"24/48",
+			"location" : "classic"
+		},
+		{
+			"id" : 4,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "클래식 제 2 테스트 2",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "cd",
+			"bitrate" :"24/48",
+			"location" : "classic"
+		},
+		{
+			"id" : 5,
+			"url" : "*.mp3",
+			"img" : "/images/etc/bnr-dummy-album.jpg",
+			"title" : "클래식 제 3 테스트 3",
+			"musicion" : "drunken_j",
+			"music": {
+				"intro" : "/mqs/album/LOT6YOg",
+				"outro" : "/mqs/artist/LOT6ntJ"
+			},
+			"type" : "cd",
+			"bitrate" :"24/48",
+			"location" : "classic"
+		}
 	]
 }
