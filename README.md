@@ -12,8 +12,8 @@ npm install -g json-server
 # run webpack-devserver
 npm run serve
 
-# running json dummy server
-json-server dummy.json
+# running json dummy server :: --watch 옵션은 파일이 변경되면 자동으로 갱신해준다는 의미
+json-server --watch dummy.json
 ```
 
 ### Compiles and minifies for production
