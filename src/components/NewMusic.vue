@@ -88,7 +88,6 @@ export default {
 					this.lists.overseas = response.data.filter(list => !!list['location'] && list['location'] === 'overseas');
 					this.lists.classic = response.data.filter(list => !!list['location'] && list['location'] === 'classic');
 
-					console.log(this.lists);
 					// 초기에 바인딩은..
 
 				})
@@ -104,7 +103,6 @@ export default {
 		}
 	},
 	mounted : function () {
-		console.log(this.lists.domestic);
 		this.getList();
 	}
 }
