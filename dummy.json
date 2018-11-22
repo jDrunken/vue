@@ -113,5 +113,29 @@
 			"bitrate" :"24/48",
 			"location" : "classic"
 		}
+	],
+	"musthave" : [
+		{
+			"id" : 0,
+			"href" : "/test/weruiwerksdkjksdf",
+			"title" : "스테디 셀링",
+			"musicion" : "SK",
+			"type" : "dsd",
+			"bitrate" : "128",
+			"is" : {
+				"steady" : true
+			}
+		},
+		{
+			"id" : 1,
+			"href" : "/test/weruiwerksdkjksdf",
+			"title" : "큐레이션",
+			"musicion" : "SK",
+			"type" : "mqs",
+			"bitrate" : "128",
+			"is" : {
+				"curation" : true
+			}
+		}
 	]
 }
