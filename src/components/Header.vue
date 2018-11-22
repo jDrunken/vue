@@ -5,20 +5,20 @@
 	<!-- <router-link to="/Shop">Shop</router-link> -->
 	<!-- <a href="#">Myaccount</a> -->
 <div class="container-fluid GNB">
-	<div class="container text-right">
+	<div class="container text-right" v-once>
 		<ul class="nav nav-utility pull-right">
-			<li><a href="#" class="sonodoosDown" onfocus="this.blur()"><img src="/images/icon/btn-groovers-play.png" class="Groovers-Player-Icon" alt="Groovers Player Icon"> Groovers Player </a></li>
-			<li><a href="/misc/event" onfocus="this.blur()">Event</a></li>
-			<li><a href="/user/vipLounge" onfocus="this.blur()">VIP Lounge</a></li>
-			<li class="cart"><a href="/user/cart" onfocus="this.blur()"><i class="btn btn-icon btn-cart"></i><span>Cart</span><i class="badge" id="cartCount" style="display:none;">0</i></a></li>
+			<li><a href="#" class="sonodoosDown"><img src="/images/icon/btn-groovers-play.png" class="Groovers-Player-Icon" alt="Groovers Player Icon"> Groovers Player </a></li>
+			<li><a href="/misc/event">Event</a></li>
+			<li><a href="/user/vipLounge">VIP Lounge</a></li>
+			<li class="cart"><a href="/user/cart"><i class="btn btn-icon btn-cart"></i><span>Cart</span><i class="badge" id="cartCount" style="display:none;">0</i></a></li>
 		</ul>
 	</div>
 
 	<nav class="navbar">
-		<div class="container">
+		<div class="container" v-once>
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/main" onfocus="this.blur()"><img src="/images/gnb/groovers.logo.png" alt="groovers logo"></a>
+				<a class="navbar-brand" href="/main"><img src="/images/gnb/groovers.logo.png" alt="groovers logo"></a>
 			</div><!-- //.navbar-header -->
 
 			<div class="collapse navbar-collapse">
@@ -34,25 +34,17 @@
 		</div><!-- /.container 1st -->
 
 		<div class="container">
-
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-left-45px" id="groovers-gnb"> <!-- @ID 추가 -->
-					<li class="menu-main free-membership active"><a href="/coupon/giftcard" onfocus="this.blur()">&gt; Membership </a></li>
-					<li class="menu-music"><a href="/mqs/chart/updates" onfocus="this.blur()">Music</a></li>
-					<li class="menu-library"><a href="/library" onfocus="this.blur()">Library</a></li>
-					<li><a href="http://shop.groovers.kr" onfocus="this.blur()">Shop</a></li>
+					<li class="menu-main free-membership active"><a href="/coupon/giftcard">&gt; Membership </a></li>
+					<li class="menu-music"><a href="/mqs/chart/updates">Music</a></li>
+					<li class="menu-library"><a href="/library">Library</a></li>
+					<li><a href="http://shop.groovers.kr">Shop</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right-45px groovers-account">
 					<li class="dropdown">
-
-						<a onclick="openAlert( '#loginLayer' );updateCartCount();return false;" class="dropdown-toggle" onfocus="this.blur()">My Account</a>
-						<ul class="dropdown-menu groovers-dropdown" role="menu">
-							<li><a href="javascript:void(0)" onclick="openAlert( '#loginLayer' );$('#input_id').trigger('click')" onfocus="this.blur()">로그인/회원가입</a></li>
-							<li><a href="/voucher" onfocus="this.blur()">이용권/쿠폰</a></li>
-							<li><a href="/coupon/giftcard" onfocus="this.blur()">이용권구매</a></li>
-							<li class="last"><a href="/cs/faq/list" class="bor_none" onfocus="this.blur()">고객센터</a></li>
-						</ul>
+						<a class="dropdown-toggle" href="/login" v-on:click="openLogin($event)">My Account</a>
 					</li>
 				</ul>
 			</div><!-- //.navbar-collapse -->
@@ -63,6 +55,14 @@
 
 <script>
 export default {
-	name : 'Header'
+	name : 'Header',
+	methods : {
+		openLogin : function (event) {
+			event.preventDefault();
+			this.$emit
+		}
+	},
+	mounted : function () {
+	}
 }
 </script>
