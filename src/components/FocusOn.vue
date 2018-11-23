@@ -3,16 +3,16 @@
 	<ul class="nav nav-section">
 		<li><h3>Focus On!</h3></li>
 		<li class="arrow" id="hot-item" v-if="viewMoreButtonGroup">
-			<a class="btn btn-icon btn-arrow-left-gray" data-exec="prev" onfocus="this.blur()">
+			<a class="btn btn-icon btn-arrow-left-gray" data-exec="prev" v-on:click="underConstruction($event)">
 			</a>
-			<a class="btn btn-icon btn-arrow-right-gray" data-exec="next">
+			<a class="btn btn-icon btn-arrow-right-gray" data-exec="next" v-on:click="underConstruction($event)">
 			</a>
 		</li>
 	</ul> <!-- //.nav-section -->
 
 	<div class="item-container active" v-bind:key="list.id" v-for="list in lists">
 		<div class="item-img">
-			<a v-bind:href="list.href">
+			<a v-bind:href="list.href" v-on:click="underConstruction($event)">
 				<img v-bind:src="list.img" alt="" class="img-responsive">
 			</a>
 		</div>
@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import EventBus from '../EventBus.js';
 export default {
 	name : 'FocusOn',
 	data : function () {
@@ -42,6 +43,10 @@ export default {
 				.then((response) => {
 					this.lists = response.data;
 				})
+		},
+		underConstruction : function (event) {
+			event.preventDefault();
+			EventBus.$emit('isAlertView',true);
 		}
 	},
 	mounted : function () {

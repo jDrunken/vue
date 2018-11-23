@@ -26,11 +26,11 @@
 			<tr v-for="(list,index) in display.list" v-bind:key="index">
 				<td class="chart-rank text-center">{{index}}</td>
 				<td>
-					<a class="music-title ell" v-bind:href="list.href" v-bind:title="list.title">
+					<a class="music-title ell" v-bind:href="list.href" v-bind:title="list.title" v-on:click="underConstruction($event)">
 						{{ list.title }}
 					</a>
 					<span class="chart-artist-span">
-						<a class="artist-name ell" v-bind:href="list.href" v-bind:title="list.musicion">
+						<a class="artist-name ell" v-bind:href="list.href" v-bind:title="list.musicion" v-on:click="underConstruction($event)">
 							{{ list.musicion }}
 						</a>
 					</span>
@@ -39,8 +39,8 @@
 					</div>
 				</td>
 				<td class="chart-play text-right">
-					<a class="btn btn-icon btn-play-o-sm play-music" value="LOT61Wt" title="듣기"></a>
-					<a class="btn btn-icon btn-add-o-sm" title="담기"></a>
+					<a class="btn btn-icon btn-play-o-sm play-music" value="LOT61Wt" title="듣기" v-on:click="underConstruction($event)"></a>
+					<a class="btn btn-icon btn-add-o-sm" title="담기" v-on:click="underConstruction($event)"></a>
 					<span style="display:none;" class="sonodoosApp"></span>
 				</td>
 			</tr>
@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import EventBus from '../EventBus.js';
+
 export default {
 	name : 'MustHave',
 	data : function () {
@@ -86,6 +88,10 @@ export default {
 			}
 			this.display.type = type;
 			this.display.list = this.lists[type]
+		},
+		underConstruction : function (event) {
+			event.preventDefault();
+			EventBus.$emit('isAlertView',true);
 		}
 	},
 	created : function () {

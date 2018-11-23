@@ -57,23 +57,23 @@
 							</div>
 							<div class="row">
 								<div class="col-xs-12 btn-login">
-									<a class="btn btn-lg btn-primary btn-fix" href="javascript:void(0)" id="loginReqBtn" onfocus="this.blur()">로그인</a>
-									<a class="btn btn-lg btn-primary btn-fix btn-join" href="https://www.groovers.kr/user/join" onfocus="this.blur()">회원가입</a>
+									<a class="btn btn-lg btn-primary btn-fix" href="javascript:void(0)" id="loginReqBtn"v-on:click="underConstruction($event)">로그인</a>
+									<a class="btn btn-lg btn-primary btn-fix btn-join" href="https://www.groovers.kr/user/join"v-on:click="underConstruction($event)">회원가입</a>
 								</div>
 							</div>
 
 							<div class="text-center find-user">
-								<a href="/user/find/findId" onfocus="this.blur()">아이디 찾기</a>
+								<a href="/user/find/findId"v-on:click="underConstruction($event)">아이디 찾기</a>
 								│
-								<a href="/user/find/findId" onfocus="this.blur()">비밀번호 찾기</a>
+								<a href="/user/find/findId"v-on:click="underConstruction($event)">비밀번호 찾기</a>
 							</div>
 
 							<div class="quick-login">
 								<h5>간편 로그인</h5>
-								<a href="javascript:void(0)" class="nv-login" onfocus="this.blur()"></a>
-								<a href="javascript:void(0)" class="fb-login" style="background-image:url(/images/icon/btn-login-icon2.png)" onfocus="this.blur()"></a>
-								<a href="javascript:void(0)" class="kt-login" style="background-image:url(/images/icon/btn-login-icon3.png)" onfocus="this.blur()"></a>
-								<a href="javascript:void(0)" class="gg-login" style="background-image:url(/images/icon/btn-login-icon4.png)" onfocus="this.blur()"></a>
+								<a href="javascript:void(0)" class="nv-login"v-on:click="underConstruction($event)"></a>
+								<a href="javascript:void(0)" class="fb-login" style="background-image:url(/images/icon/btn-login-icon2.png)"v-on:click="underConstruction($event)"></a>
+								<a href="javascript:void(0)" class="kt-login" style="background-image:url(/images/icon/btn-login-icon3.png)"v-on:click="underConstruction($event)"></a>
+								<a href="javascript:void(0)" class="gg-login" style="background-image:url(/images/icon/btn-login-icon4.png)"v-on:click="underConstruction($event)"></a>
 							</div>
 						</div>
 						<div class="nonsub-area" style="display:none;">
@@ -89,7 +89,7 @@
 
 							<div class="row">
 								<div class="col-xs-12 btn-login">
-									<a class="btn btn-lg btn-primary btn-fix" onclick="$('.nonsub-area').hide();$('.agree-area').show();" onfocus="this.blur()">다음 단계로 이동</a>
+									<a class="btn btn-lg btn-primary btn-fix" onclick="$('.nonsub-area').hide();$('.agree-area').show();"v-on:click="underConstruction($event)">다음 단계로 이동</a>
 								</div>
 							</div>
 						</div>
@@ -120,13 +120,15 @@ export default {
 			EventBus.$on('isLoginView',(status) => {
 				this.isViewPopup = status;
 			});
+		},
+		underConstruction : function (event) {
+			event.preventDefault();
+			EventBus.$emit('isAlertView',true);
 		}
-
 	},
 	mounted : function () {
 		this.getPopupStatus();
 	}
-
 }
 </script>
 

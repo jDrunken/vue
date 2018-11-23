@@ -68,10 +68,10 @@ export default {
 	methods : {
 		closeAlert : function () {
 			this.isViewAlert = false;
+			EventBus.$emit('isAlertView',false);
 		},
 		getAlertStatus : function () {
 			EventBus.$on('isAlertView', (status) => {
-				console.log(status);
 				this.isViewAlert = status;
 			});
 		}

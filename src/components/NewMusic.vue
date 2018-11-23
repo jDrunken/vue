@@ -33,10 +33,10 @@
 					</div>
 					<img v-bind:src="list.img" v-bind:alt="list.title" class="img-responsive">
 				</div>
-				<a class="music-title ell" v-bind:href="list.href" v-bind:title="list.title">
+				<a class="music-title ell" v-bind:href="list.href" v-bind:title="list.title" v-on:click="underConstruction($event)">
 					<h4>{{ list.title }}</h4>
 				</a>
-				<a class="artist-name ell" v-bind:href="list.music.intro" v-bind:title="list.musicion">{{ list.musicion }}</a>
+				<a class="artist-name ell" v-bind:href="list.music.intro" v-bind:title="list.musicion" v-on:click="underConstruction($event)">{{ list.musicion }}</a>
 				<div class="artist-name-sub">
 				</div>
 
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import EventBus from '../EventBus.js';
 export default {
 	name : 'NewMusic',
 	data : function () {
@@ -100,6 +101,10 @@ export default {
 			this.display.location = type;
 			this.display.viewMusicList = this.lists[type]
 
+		},
+		underConstruction : function (event) {
+			event.preventDefault();
+			EventBus.$emit('isAlertView',true);
 		}
 	},
 	mounted : function () {
