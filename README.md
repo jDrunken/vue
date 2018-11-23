@@ -1,4 +1,4 @@
-# vue (groovers demo)
+# groovers index page mockup with vue
 
 ## Project setup
 
@@ -12,7 +12,7 @@ npm install -g json-server
 # run webpack-devserver
 npm run serve
 
-# running json dummy server :: --watch 옵션은 파일이 변경되면 자동으로 갱신해준다는 의미
+# running json dummy server :: --watch 옵션은 파일이 변경되면 자동으로 서버가 갱신됨.
 json-server --watch dummy.json
 ```
 
@@ -21,17 +21,13 @@ json-server --watch dummy.json
 npm run build
 ```
 
-## not yet
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### what I learned during 3 days
+-	vue-cli
+-	vue lifecycle hook
+-	vue-router
+-	template syntax
+-	class/ template binding
+-	event emit/props
+-	component
+-	event handling
+-	condition renderling
