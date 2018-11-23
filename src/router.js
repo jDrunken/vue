@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from './views/Main.vue'
+import Login from './components/Login.vue'
 
 Vue.use(Router)
 
@@ -19,9 +20,7 @@ export default new Router({
 		{
 			path: '/login',
 			name: 'login',
-			beforeEnter : function (to,from,next) {
-				console.log('맞냐? 잘 돌아가냐?')
-			}
+			component : Login
 		}
 	]
 })
