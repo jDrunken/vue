@@ -7,10 +7,15 @@
 <div class="container-fluid GNB">
 	<div class="container text-right" v-once>
 		<ul class="nav nav-utility pull-right">
-			<li><a href="#" class="sonodoosDown"><img src="/images/icon/btn-groovers-play.png" class="Groovers-Player-Icon" alt="Groovers Player Icon"> Groovers Player </a></li>
-			<li><a href="/misc/event">Event</a></li>
-			<li><a href="/user/vipLounge">VIP Lounge</a></li>
-			<li class="cart"><a href="/user/cart"><i class="btn btn-icon btn-cart"></i><span>Cart</span><i class="badge" id="cartCount" style="display:none;">0</i></a></li>
+			<li>
+				<a href="#" class="sonodoosDown" v-on:click="underConstruction($event)">
+					<img src="/images/icon/btn-groovers-play.png" class="Groovers-Player-Icon" alt="Groovers Player Icon">
+					Groovers Player
+				</a>
+			</li>
+			<li><a href="/misc/event" v-on:click="underConstruction($event)">Event</a></li>
+			<li><a href="/user/vipLounge" v-on:click="underConstruction($event)">VIP Lounge</a></li>
+			<li class="cart"><a href="/user/cart" v-on:click="underConstruction($event)"><i class="btn btn-icon btn-cart"></i><span>Cart</span><i class="badge" id="cartCount" style="display:none;">0</i></a></li>
 		</ul>
 	</div>
 
@@ -18,7 +23,7 @@
 		<div class="container" v-once>
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/main"><img src="/images/gnb/groovers.logo.png" alt="groovers logo"></a>
+				<a class="navbar-brand" href="/main" v-on:click="openLogin($event)"><img src="/images/gnb/groovers.logo.png" alt="groovers logo"></a>
 			</div><!-- //.navbar-header -->
 
 			<div class="collapse navbar-collapse">
@@ -36,10 +41,10 @@
 		<div class="container">
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-left-45px" id="groovers-gnb"> <!-- @ID 추가 -->
-					<li class="menu-main free-membership active"><a href="/coupon/giftcard">&gt; Membership </a></li>
-					<li class="menu-music"><a href="/mqs/chart/updates">Music</a></li>
-					<li class="menu-library"><a href="/library">Library</a></li>
-					<li><a href="http://shop.groovers.kr">Shop</a></li>
+					<li class="menu-main free-membership active" v-on:click="openLogin($event)"><a href="/coupon/giftcard">&gt; Membership </a></li>
+					<li class="menu-music"><a href="/mqs/chart/updates" v-on:click="openLogin($event)">Music</a></li>
+					<li class="menu-library"><a href="/library" v-on:click="openLogin($event)">Library</a></li>
+					<li><a href="http://shop.groovers.kr" v-on:click="openLogin($event)">Shop</a></li>
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right-45px groovers-account">
@@ -54,15 +59,19 @@
 </template>
 
 <script>
+import EventBus from '../EventBus.js';
+
 export default {
 	name : 'Header',
 	methods : {
 		openLogin : function (event) {
 			event.preventDefault();
-			this.$emit
+			EventBus.$emit('isLoginView',true);
+		},
+		underConstruction : function (event) {
+			event.preventDefault();
+			EventBus.$emit('isAlertView',true);
 		}
 	},
-	mounted : function () {
-	}
 }
 </script>

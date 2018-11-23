@@ -2,8 +2,9 @@
 <div id="app">
 	<Header/>
 	<Container/>
-	<login :callStatus="false"/>
+	<login/>
 	<Footer/>
+	<popup/>
 </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from './components/Header.vue'
 import Container from './components/Container.vue'
 import Login from './components/Login.vue'
 import Footer from './components/Footer.vue'
+import Popup from './components/Popup.vue'
 
 export default {
 	name: 'App',
@@ -19,7 +21,8 @@ export default {
 		Header,
 		Container,
 		Login,
-		Footer
+		Footer,
+		Popup
 	}
 }
 </script>
